@@ -1,0 +1,30 @@
+{
+  "name": "mern-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "server": "nodemon index.js",
+    "client": "cd ./client && yarn start",
+    "client:install": "cd ./client && yarn",
+    "client:build": "cd ./client && yarn build",
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.7",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.3",
+    "cross-env": "^7.0.2"
+  }
+}
